@@ -25,12 +25,13 @@ source .venv/bin/activate
 Dependencies are declared in `masterclass/pyproject.toml`; `uv.lock` pins exact cross-platform versions. Add packages with `uv add <pkg>` and commit both files.
 
 ## 4. Secrets (NOT in git)
-Create `masterclass/.env` manually (copy values from the Windows laptop / password manager):
+`masterclass/.env` is git-ignored, so it does not come with the clone. The user must transfer it from the Windows laptop
+(AirDrop, USB, or password manager) into `masterclass/.env`. If unavailable, ask the user for the keys, then:
+```bash
+cd masterclass
+cp .env.example .env       # then fill in the three values
 ```
-TAVILY_API_KEY=...
-OPENAI_API_KEY=...
-GOOGLE_API_KEY=...
-```
+Keys needed: `TAVILY_API_KEY`, `OPENAI_API_KEY`, `GOOGLE_API_KEY` (Gemini). Never commit `.env`.
 
 ## 5. Ollama (needed for embeddings)
 ```bash
