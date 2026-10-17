@@ -19,11 +19,10 @@ git clone git@github.com:aagarwal4/generative-ai-2025.git code/generative-ai-202
 ```bash
 brew install uv            # if missing
 cd masterclass
-uv venv --python 3.13 .venv
-uv pip install -r requirements.txt
+uv sync                    # creates .venv from pyproject.toml + uv.lock
 source .venv/bin/activate
 ```
-`requirements.txt` was frozen on Windows; if a package fails on macOS, install it without the pin.
+Dependencies are declared in `masterclass/pyproject.toml`; `uv.lock` pins exact cross-platform versions. Add packages with `uv add <pkg>` and commit both files.
 
 ## 4. Secrets (NOT in git)
 Create `masterclass/.env` manually (copy values from the Windows laptop / password manager):

@@ -1,0 +1,43 @@
+[project]
+name = "masterclass"
+version = "0.1.0"
+description = "RAG + Agentic AI masterclass notebooks"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4",
+    "chromadb",
+    "faiss-cpu",
+    "gradio",
+    "huggingface-hub",
+    "ipykernel",
+    "langchain",
+    "langchain-chroma",
+    "langchain-classic",
+    "langchain-community",
+    "langchain-core",
+    "langchain-experimental",
+    "langchain-google-genai",
+    "langchain-groq",
+    "langchain-ollama",
+    "langchain-openai",
+    "langchain-tavily",
+    "langchain-text-splitters",
+    "langgraph",
+    "lxml",
+    "nbconvert",
+    "numpy",
+    "pandas",
+    "pydantic",
+    "pypdf",
+    "python-dotenv",
+    "rank-bm25",
+    "requests",
+    "sentence-transformers",
+    "tiktoken",
+    "transformers",
+    "wikipedia",
+]
+
+[tool.uv]
+package = false
