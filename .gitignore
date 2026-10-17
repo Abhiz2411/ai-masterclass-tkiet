@@ -1,0 +1,14 @@
+# secrets
+.env
+*.env
+# python
+.venv/
+__pycache__/
+*.executed.ipynb
+.ipynb_checkpoints/
+chroma*/
+# third-party clone (clone separately, see SETUP.md)
+code/generative-ai-2025/
+# os
+.DS_Store
+Thumbs.db
