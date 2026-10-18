@@ -46,3 +46,6 @@ LLM is Gemini `gemini-flash-latest`. See `masterclass/README.md`.
 
 ## Sync workflow
 `git pull` before work; `git add -A && git commit -m "msg" && git push` after.
+
+## Troubleshooting
+- **`Failed to build numpy==1.26.4` / `NumPy requires GCC >= 8.4`**: someone ran `uv pip install "numpy<2"` (or uncommented an install cell). Python 3.13 has no numpy 1.x wheel, so it tries to compile and fails. Never pin `numpy<2`. Fix: `cd masterclass && uv sync` (restores numpy 2.x). All dependencies are already in `pyproject.toml`; notebook install cells are not needed.
